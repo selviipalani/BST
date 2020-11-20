@@ -110,11 +110,11 @@ public class BST <T extends Comparable <T>> {
         if(node == null){
             return null;
         }
-        if(item.compareTo(node.data) < 0){
+        if(item.compareTo(node.data) > 0){
             node.right = delete(item,node.right);
             return node;
         }
-        else if(item.compareTo(node.data) > 0){
+        else if(item.compareTo(node.data) < 0){
             node.left = delete(item,node.left);
             return node;
         }
